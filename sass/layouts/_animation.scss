@@ -1,0 +1,85 @@
+@mixin spiner__loader {
+      .spinner {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: Rotate 2.4s both infinite linear;
+      }
+      .path {
+        animation: DrawLine 1.6s both infinite alternate linear;
+        fill: none;
+        stroke: #000;
+        stroke-width: 50;
+      }
+      @keyframes Rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes DrawLine {
+        0% {
+          stroke-dasharray: 0 126;
+        }
+        100% {
+          stroke-dasharray: 126 126;
+        }
+      }
+}
+$anim-dur: 1.5s;
+@mixin card__annimation {
+  animation: card__annim__key $anim-dur forwards;
+  @for $i from 1 through 9 {
+    &--#{$i} {
+        animation-delay: 100ms * $i;
+    }
+}
+  @keyframes card__annim__key {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@mixin card__annim__check {
+  .menu__check{
+    display: flex;
+    width: 0px;
+    transition-property: width;
+    transition-duration: 300ms;
+    i{
+      transition-property: transform;
+    transition-duration: 300ms;
+    }
+  }
+  &:hover{
+    .menu__check{
+       width: 60px;
+       i{
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
+  @keyframes card__annim__ok {
+    0% {
+      
+        display: flex;
+        
+
+    }
+    100% {
+     width: 60px;
+        display: flex;
+       
+      
+    }
+  }
+}

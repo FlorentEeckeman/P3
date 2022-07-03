@@ -1,0 +1,187 @@
+@import "./base/police";
+@import "./utils/variables";
+@import "./components/card-restaurant";
+@import"./components/body";
+@import"./components/header";
+@import"./components/footer";
+@import "./layouts/animation";
+
+body{
+    @include doc__body;
+    @include tablette-only{
+        &:nth-child(n){
+        width: 65%;
+        margin: auto;
+    }
+    }
+    @include desktop-only{
+        &:nth-child(n){
+        width: 40%;
+        margin: auto;
+    }
+    }
+    }
+header{
+        a{
+            position: absolute;
+            top: 16px;
+            left: 15px;
+            width: 14px;
+            height: 16px;
+            color: $noir-clair;
+            @include tablette-only{
+                left: 20%;  
+            }
+            @include desktop-only{
+                left: 31%;  
+                width: 18px;
+                height: 20px;
+            }
+        }
+    @include doc__head;   
+    }
+main{
+    font-family: 'Roboto';
+    
+    .photo-restaurant{
+        width: 100%;
+        height: 250px;
+        z-index: 2;
+        img{
+            width: 100%;
+            height: 100%;  
+        }
+    }
+    .menu__complet{
+        padding: 15px;
+        position: relative;
+        border-radius: 25px 25px 0px 0px;
+        z-index: 1;
+        margin-top: -20px;
+        background: $blanc-casse;
+        .menu__titre{
+            display: flex;
+            padding: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            h2{
+                font-family: 'Shrikhand', cursive;
+                margin: 0;
+            }
+            i{
+                font-size: 1.6em;
+            }
+        }
+        div{
+            padding: 10px;
+            h4{
+                margin: 0;
+                font-weight: 400;
+            }
+            .underline{
+                position: relative;
+                margin-top: 7px;
+                padding: 0;
+                height: 3px;
+                width: 40px;
+                background: $thrid-color;
+            }
+        }
+        .choix{
+           display: flex;
+           flex-direction: column;
+
+           padding: 0;
+           padding-bottom: 35px;
+           justify-content: space-between;
+            div{ 
+                height: 75px;
+                
+                .card__menu{
+                    background: rgb(255, 255, 255);
+                    opacity: 0;
+                    @include card__annimation;
+                    @include card__annim__check;
+                    @include ombre;
+                   }
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0px;
+                    border-radius: 20px;
+                    background: rgba(255, 255, 255);
+                    align-content: flex-end;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    min-width: 0;
+                    div{
+                        display: flex;
+                        
+                        flex-direction: row;
+                        padding: 0;
+                        h3{
+                            display: block;
+                            margin: 0;
+                            padding: 15px 5px 0px 5px;
+                            padding-top: 15px;
+                            padding-bottom: 0px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{  
+                            display: block;
+                            margin: 0;
+                            padding: 5px;
+                            padding-bottom: 10px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .prix{
+                            padding: 13px;
+                            padding-right: 20px;
+                            font-weight: 700;
+                        }
+                    }
+                    .card__menu__info{
+                        display: block;
+                        padding-left: 5px;
+                        flex: 1;
+                    }
+                    .menu__check{
+                        display: none;
+                        align-content: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        background: $thrid-color;
+                        border-radius: 0px 20px 20px 0px;
+                        i{
+                            font-size: 32px;
+                            color: $blanc;
+                        }
+                    }
+                }
+            }
+        }
+        .menu__commander{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 70px;
+            button{
+                width: 50%;
+            @include bouton_color;
+            }
+        }
+    }
+}   
+footer{
+    @include doc__foot;
+    @include tablette-only{
+        text-align: center;
+        }
+    @include desktop-only{
+            text-align: center;
+        }
+}

@@ -1,0 +1,16 @@
+@mixin doc__head{
+    background-color: $blanc;
+     #titre{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: $head-height;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-family: 'Shrikhand', cursive;
+            margin: 0;
+            
+        }
+    }
+}

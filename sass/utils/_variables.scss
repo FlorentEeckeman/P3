@@ -1,0 +1,57 @@
+$breakpoint-tablette: 768px;
+$breakpoint-deesktop: 992px;
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$thrid-color: #99E2D0;
+$blanc : #ffffff;
+$blanc-casse: #f6f6f6;
+$gris: #eaeaea;
+$ombre: #b7b7b7;
+$noir-clair: #353535;
+$color-test: #fadf4a;
+
+
+$head-height: 3em;
+$puce-card:1.8em;
+$offset-card : calc($puce-card/2);
+
+$breakpoints: (
+    tablette: 768px,
+    desktop: 992px
+);
+
+@mixin gros-titre {
+    font-family: 'Roboto', ;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin: auto;
+}
+@mixin ombre {
+    border: 0px;
+    box-shadow: 0px 4px 8px $ombre;
+}
+@mixin bouton_color {
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    padding: 1.2em;
+    border-radius: 30px;
+    font-weight: 500;
+    color: $blanc;
+    @include ombre;
+    &:hover{
+
+        
+        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+        box-shadow: 0px 4px 14px $ombre;
+    }
+}
+@mixin tablette-only {
+    @media (min-width: map-get($breakpoints, tablette)) {
+        @content;
+      }
+  }
+  @mixin desktop-only {
+    @media (min-width: map-get($breakpoints, desktop)) {
+        @content;
+      }
+  }

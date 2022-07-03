@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ohmyfood</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://kit.fontawesome.com/0d7d64b98d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="spinner__loader">
+            <svg class="spinner" viewBox="0 0 100 100" height="100px" width="100px">
+                <clipPath id="clip2">
+                    <path d="M 49.955078,14 C 30.09038,14.024795 13.999995,30.139653 14,50.009766 14.000011,69.897413 30.117757,86.019531 50,86.019531 57.533391,86.019206 64.876872,83.654947 70.996094,79.259766 70.996094,79.259766 73.597282,76.983176 71.980949,73.353833 74.079878,74.053433 75.940813,74.393659 77.127218,73.564393 76.343164,71.278568 73.11648,68.028655 70.974963,67.129418 70.1305,67.938022 70.191226,69.173407 70.555185,71.363707 68.203379,68.32163 63.9375,69.537109 63.9375,69.537109 59.869582,72.439459 54.997159,73.999645 50,74 36.745166,74 26,63.254834 26,50 25.999491,36.827107 36.616678,26.115778 49.789062,26 49.859374,25.999691 49.929688,25.999691 50,26 63.254834,26 74,36.745166 74,50 74,50 74.29272,52.885855 78.241492,53.642345 76.253618,53.915104 75.706495,55.251097 75.294878,56.510437 77.418848,57.575421 80.436759,57.479751 83.181759,57.155104 82.829984,55.428199 82.702987,54.319008 80.795482,53.862423 85.020033,53.755924 86.000924,50.283644 86,50.009766 85.99999,30.122118 69.882244,14 50,14 Z" />
+                </clipPath>
+                <path class="path" clip-path="url(#clip2)" d="M 66.421312,61.416675 C 60.11606,70.485915 47.652564,72.726567 38.583325,66.421312 29.514085,60.11606 27.273433,47.652564 33.578688,38.583325 39.88394,29.514085 52.347436,27.273433 61.416675,33.578688 70.485915,39.88394 72.726567,52.347436 66.421312,61.416675" />
+            </svg>
+        </div>
+        <header>
+            <div id="titre">
+                <img src="./images/logo/ohmyfood@2x.svg" alt="">
+            </div>
+        </header>
+        <main>
+            <div class="restaurant__search">
+                <div id="booking">
+                    <div id="location">
+                        <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
+                    </div>
+                    <div id="rest-explorer">
+                        <h2>Réservez le menu qui vous convient</h2>
+                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.
+                        </p>
+                        <div id="btn-explorer">
+                            <button onclick="window.location.href='#restaurant';">Explorer nos restaurants</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="operation">
+                    <h2>Fonctionnement</h2>
+                    <div class="card__fonc">
+                        <div class="card__number">
+                        <p>1</p>
+                        </div>
+                        <div class="card__text"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</div>
+                    </div>
+                    <div class="card__fonc">
+                        <div class="card__number">
+                        <p>2</p>
+                        </div>
+                        <div class="card__text"><i class="fa-solid fa-list"></i>Composez votre menu</div>
+                    </div>
+                    <div class="card__fonc">
+                        <div class="card__number">
+                        <p>3</p>
+                        </div>
+                        <div class="card__text" id="degust"><i class="fa-solid fa-store"></i>Dégustez au restaurant</div>
+                    </div>
+                </div>
+            </div>
+            <div id="restaurant">
+                <h2>Restaurants</h2>
+                <div id="restaurant__view">
+                    <div class="restaurant__card">
+                        <div>
+                            <a href="./page/Menu - La palette du goût.html" class="restaurant__card__img">
+                                <div id="restaurant__card__img__1">
+                                    <div class="new-restaurant">nouveau</div>
+                                </div>
+                            </a>
+                            <div class="restaurant__card__info">
+                                <div class="restaurant__card__info__title">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="restaurant__card__info__like">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurant__card">
+                        <div>
+                            <a href="/page/Menu - La note enchantée.html" class="restaurant__card__img">
+                                <div id="restaurant__card__img__2">
+                                    <div class="new-restaurant">nouveau</div>
+                                </div>
+                            </a>
+                            <div class="restaurant__card__info">
+                                <div class="restaurant__card__info__title">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
+                                <div class="restaurant__card__info__like">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurant__card">
+                        <div>
+                            <a href="/page/Menu - À la française.html" class="restaurant__card__img">
+                                <div id="restaurant__card__img__3">
+                                </div>
+                            </a>
+                            <div class="restaurant__card__info">
+                                <div class="restaurant__card__info__title">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <div class="restaurant__card__info__like">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurant__card">
+                        <div>
+                            <a href="/page/Menu - Le délice des sens.html" class="restaurant__card__img">
+                                <div id="restaurant__card__img__4">
+                                </div>
+                            </a>
+                            <div class="restaurant__card__info">
+                                <div class="restaurant__card__info__title">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="restaurant__card__info__like">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h3>ohmyfood</h3>
+            <ul>
+                <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
+                <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li><a href="mailto:nullepart@mozilla.org"> Contact</a></li>
+            </ul>
+        </footer>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>

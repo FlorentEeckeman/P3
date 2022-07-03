@@ -1,0 +1,31 @@
+@mixin doc__foot{
+    padding: 20px;
+    padding-bottom: 35px;
+    background: $noir-clair;
+    font-family: "Roboto";
+    h3{
+        font-family: 'Shrikhand';
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        color: $blanc;
+        padding: 10px;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        li{
+            padding: 5px;
+            color: $blanc;
+            i{
+                padding-right: 5px;
+            }
+            a{
+                color: $blanc;
+                text-decoration: none;
+            }
+        }
+    }
+}
