@@ -391,7 +391,6 @@ main #restaurant #restaurant__view div div div .new-restaurant {
 @media (min-width: 992px) {
   main #restaurant #restaurant__view .restaurant__card {
     flex: 1;
-    overflow: none;
   }
 }
 

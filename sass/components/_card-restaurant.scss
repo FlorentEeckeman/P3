@@ -98,7 +98,6 @@
         }   .restaurant__card{
             @include desktop-only{
                 flex: 1;
-                overflow: none;
             }
         }
     }
