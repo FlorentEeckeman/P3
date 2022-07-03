@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@keyframes hearth__anim {
+  0% {
+    background: -webkit-linear-gradient(white, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(white, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(#c9abee, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: -webkit-linear-gradient(#bb56dc, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+#spinner__loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50%;
+  background: #f6f6f6;
+  z-index: -1;
+  animation-duration: 2.5s;
+  animation-name: progress-bar;
+  animation-iteration-count: 1;
+}
+@media (min-width: 768px) {
+  #spinner__loader {
+    background: white;
+  }
+}
+#spinner__loader .spinner {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: Rotate 2.4s both infinite linear;
+}
+#spinner__loader .path {
+  animation: DrawLine 1.6s both infinite alternate linear;
+  fill: none;
+  stroke: #000;
+  stroke-width: 50;
+}
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes DrawLine {
+  0% {
+    stroke-dasharray: 0 126;
+  }
+  100% {
+    stroke-dasharray: 126 126;
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    z-index: 4;
+  }
+  to {
+    z-index: 4;
+  }
+}
+body {
+  z-index: 0;
+  background-color: rgb(216, 226, 216);
+}
+
+header {
+  background-color: #ffffff;
+}
+header #titre {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 3em;
+  justify-content: center;
+  align-items: center;
+}
+header #titre h2 {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+
+main {
+  font-family: "Roboto";
+  background: white;
+}
+@media (min-width: 768px) {
+  main:nth-child(n) {
+    width: 65%;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 992px) {
+  main:nth-child(n) {
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 992px) {
+  main .restaurant__search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #f6f6f6;
+    border-radius: 20px;
+  }
+}
+@media (min-width: 768px) {
+  main #booking {
+    margin: auto;
+  }
+}
+@media (min-width: 992px) {
+  main #booking {
+    padding: 40px;
+    flex: 1;
+  }
+}
+main #booking #location {
+  display: inline-block;
+  width: 100%;
+  height: 3em;
+  color: #353535;
+  font-weight: 500;
+  background-color: #eaeaea;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main #booking #location {
+    border-radius: 20px;
+  }
+}
+main #booking #location i {
+  padding-right: 1em;
+  color: #353535;
+}
+main #booking #rest-explorer {
+  text-align: center;
+  padding: 3em;
+  background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  main #booking #rest-explorer {
+    margin-top: 15px;
+    border-radius: 20px;
+  }
+}
+main #booking #rest-explorer h2 {
+  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: auto;
+}
+main #booking #rest-explorer #btn-explorer {
+  padding: 1em;
+}
+main #booking #rest-explorer #btn-explorer button {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 1.2em;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 0px;
+  box-shadow: 0px 4px 8px #b7b7b7;
+}
+main #booking #rest-explorer #btn-explorer button:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 4px 14px #b7b7b7;
+}
+main #operation {
+  padding: 20px 0px 40px 0px;
+  background: #ffffff;
+}
+@media (min-width: 768px) {
+  main #operation {
+    margin-top: 20px;
+    background: #f6f6f6;
+    border-radius: 20px;
+  }
+}
+@media (min-width: 992px) {
+  main #operation {
+    padding: 40px;
+    flex: 1;
+  }
+}
+main #operation h2 {
+  padding: 17px;
+}
+main #operation div {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  align-content: center;
+}
+main #operation div div {
+  width: 1.8em;
+  height: 1.8em;
+  padding: 0px;
+  background: #9356DC;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 2;
+}
+main #operation div .card__text {
+  display: flex;
+  flex: 1;
+  height: 2.3em;
+  position: relative;
+  background: #f6f6f6;
+  color: black;
+  font-weight: 700;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: 1em;
+  margin-left: -0.9em;
+  z-index: 1;
+  border: 0px;
+  box-shadow: 0px 4px 8px #b7b7b7;
+}
+main #operation div .card__text i {
+  padding: 1em;
+  color: #7e7e7e;
+}
+main #operation div .card__text .fa-store {
+  color: #9356DC;
+}
+main #operation div #degust {
+  background: #f2eafb;
+}
+main #restaurant {
+  padding: 20px 0px 40px 0px;
+  background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  main #restaurant {
+    margin: 20px 0px 40px 0px;
+    border-radius: 20px;
+  }
+}
+main #restaurant h2 {
+  padding: 17px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  main #restaurant #restaurant__view {
+    display: flex;
+    overflow: auto;
+    flex-direction: row;
+  }
+}
+main #restaurant #restaurant__view #restaurant__card__img__1 {
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+main #restaurant #restaurant__view #restaurant__card__img__2 {
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+main #restaurant #restaurant__view #restaurant__card__img__3 {
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+main #restaurant #restaurant__view #restaurant__card__img__4 {
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+main #restaurant #restaurant__view div {
+  padding: 17px;
+  height: 280px;
+}
+@media (min-width: 768px) {
+  main #restaurant #restaurant__view div {
+    height: 480px;
+    width: 300px;
+  }
+}
+main #restaurant #restaurant__view div div {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 0px 4px 8px #b7b7b7;
+  align-content: center;
+}
+main #restaurant #restaurant__view div div .restaurant__card__img {
+  width: 100%;
+  flex: 1;
+}
+main #restaurant #restaurant__view div div .restaurant__card__img div {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+main #restaurant #restaurant__view div div div {
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ffffff;
+  height: 70px;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: none;
+}
+main #restaurant #restaurant__view div div div div {
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main #restaurant #restaurant__view div div div div :nth-child(n) {
+  margin: 0;
+  font-size: 17px;
+  padding-left: 10px;
+}
+main #restaurant #restaurant__view div div div .restaurant__card__info__like {
+  cursor: pointer;
+  align-items: flex-end;
+}
+main #restaurant #restaurant__view div div div .restaurant__card__info__like .fa-regular {
+  display: block;
+  font-size: 22px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+main #restaurant #restaurant__view div div div .restaurant__card__info__like .fa-solid {
+  display: none;
+}
+main #restaurant #restaurant__view div div div .restaurant__card__info__like:active .fa-regular {
+  display: none;
+}
+main #restaurant #restaurant__view div div div .restaurant__card__info__like:active .fa-solid {
+  display: block;
+  font-size: 22px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 0.4s;
+  animation-name: hearth__anim;
+  animation-iteration-count: 1;
+}
+main #restaurant #restaurant__view div div div .new-restaurant {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 4.5em;
+  height: 1.1em;
+  font-weight: 600;
+  border-radius: 3px;
+  text-align: center;
+  color: #008766;
+  background: #99e2d0;
+}
+@media (min-width: 992px) {
+  main #restaurant #restaurant__view .restaurant__card {
+    flex: 1;
+    overflow: none;
+  }
+}
+
+footer {
+  padding: 20px;
+  padding-bottom: 35px;
+  background: #353535;
+  font-family: "Roboto";
+}
+footer h3 {
+  font-family: "Shrikhand";
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px;
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+footer ul li {
+  padding: 5px;
+  color: #ffffff;
+}
+footer ul li i {
+  padding-right: 5px;
+}
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
