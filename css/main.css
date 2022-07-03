@@ -346,9 +346,13 @@ main #restaurant #restaurant__view div div div div :nth-child(n) {
   font-size: 17px;
   padding-left: 10px;
 }
+main #restaurant #restaurant__view div div div .restaurant__card__info__title {
+  flex: 3;
+}
 main #restaurant #restaurant__view div div div .restaurant__card__info__like {
   cursor: pointer;
   align-items: flex-end;
+  flex: 1;
 }
 main #restaurant #restaurant__view div div div .restaurant__card__info__like .fa-regular {
   display: block;

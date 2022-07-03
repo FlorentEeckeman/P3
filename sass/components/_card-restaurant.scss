@@ -49,9 +49,13 @@
                             padding-left: 10px;
                         }
                     }
+                    .restaurant__card__info__title{
+                        flex: 3;
+                    }
                     .restaurant__card__info__like{
                         cursor: pointer;
                         align-items: flex-end;
+                        flex: 1;
                         .fa-regular{
                             display: block;
                             font-size: 22px;
