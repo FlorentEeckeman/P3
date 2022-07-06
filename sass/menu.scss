@@ -95,6 +95,9 @@ main{
            padding: 0;
            padding-bottom: 35px;
            justify-content: space-between;
+           .card{
+            overflow: hidden; 
+         }
             div{ 
                 height: 75px;
                 

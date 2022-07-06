@@ -134,6 +134,9 @@ main .menu__complet .choix {
   padding-bottom: 35px;
   justify-content: space-between;
 }
+main .menu__complet .choix .card {
+  overflow: hidden;
+}
 main .menu__complet .choix div {
   height: 75px;
 }
