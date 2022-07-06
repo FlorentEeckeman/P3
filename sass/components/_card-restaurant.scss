@@ -65,24 +65,7 @@
                         .fa-solid{
                             display: none;
                         }
-                        &:active{
-                            .fa-regular{
-                                display: none;
-                            }
-                            .fa-solid{
-                            display: block;
-                            font-size: 22px;
-                            padding-right: 15px;
-                            padding-bottom: 10px;
-                            background: -webkit-linear-gradient($primary-color, $secondary-color);
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            animation-duration: 0.4s;
-                            animation-name: hearth__anim;
-                            animation-iteration-count: 1;
-                            }
-                        }
+                        @include annim__heart;
                     }
                     .new-restaurant{
                         display: block;
@@ -106,30 +89,4 @@
         }
     }
        
-    @keyframes hearth__anim {
-        0% {
-            background: -webkit-linear-gradient(white, white);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        25% {
-            background: -webkit-linear-gradient(white, $primary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        50% {
-            background: -webkit-linear-gradient(lighten($primary-color, 20%), $primary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        75% {
-            background: -webkit-linear-gradient(#bb56dc, $primary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        100% {
-            background: -webkit-linear-gradient($primary-color, $secondary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-      }
+    

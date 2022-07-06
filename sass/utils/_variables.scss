@@ -37,6 +37,7 @@ $breakpoints: (
     border-radius: 30px;
     font-weight: 500;
     color: $blanc;
+    cursor: pointer;
     @include ombre;
     &:hover{
 

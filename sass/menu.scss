@@ -69,9 +69,19 @@ main{
                 font-family: 'Shrikhand', cursive;
                 margin: 0;
             }
-            i{
-                font-size: 1.6em;
+            div{
+                .fa-regular{
+                    display: block;
+                    font-size: 1.6em;
+                    padding-right: 15px;
+                    padding-bottom: 10px;
+                }
+                .fa-solid{
+                    display: none;
+                }
+                @include annim__heart;
             }
+            
         }
         div{
             padding: 10px;
@@ -118,6 +128,7 @@ main{
                     flex-wrap: wrap;
                     justify-content: center;
                     min-width: 0;
+                    overflow: hidden;
                     div{
                         display: flex;
                         

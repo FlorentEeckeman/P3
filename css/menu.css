@@ -1,31 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
-@keyframes hearth__anim {
-  0% {
-    background: -webkit-linear-gradient(white, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  25% {
-    background: -webkit-linear-gradient(white, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  50% {
-    background: -webkit-linear-gradient(#c9abee, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  75% {
-    background: -webkit-linear-gradient(#bb56dc, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  100% {
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 body {
   background-color: rgb(216, 226, 216);
 }
@@ -109,8 +82,57 @@ main .menu__complet .menu__titre h2 {
   font-family: "Shrikhand", cursive;
   margin: 0;
 }
-main .menu__complet .menu__titre i {
+main .menu__complet .menu__titre div .fa-regular {
+  display: block;
   font-size: 1.6em;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+main .menu__complet .menu__titre div .fa-solid {
+  display: none;
+}
+main .menu__complet .menu__titre div:hover .fa-regular {
+  display: none;
+}
+main .menu__complet .menu__titre div:hover .fa-solid {
+  display: block;
+  font-size: 22px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 0.4s;
+  animation-name: hearth__anim;
+  animation-iteration-count: 1;
+}
+@keyframes hearth__anim {
+  0% {
+    background: -webkit-linear-gradient(white, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(white, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(#c9abee, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: -webkit-linear-gradient(#bb56dc, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 main .menu__complet div {
   padding: 10px;
@@ -218,6 +240,7 @@ main .menu__complet .choix div div {
   flex-wrap: wrap;
   justify-content: center;
   min-width: 0;
+  overflow: hidden;
 }
 main .menu__complet .choix div div div {
   display: flex;
@@ -277,6 +300,7 @@ main .menu__complet .menu__commander button {
   border-radius: 30px;
   font-weight: 500;
   color: #ffffff;
+  cursor: pointer;
   border: 0px;
   box-shadow: 0px 4px 8px #b7b7b7;
 }
