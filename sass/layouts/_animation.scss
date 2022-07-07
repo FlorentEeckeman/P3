@@ -84,15 +84,22 @@ $anim-dur: 1.5s;
   }
 }
 @mixin annim__heart {
-  &:hover{
-    .fa-regular{
-        display: none;
-    }
-    .fa-solid{
-    display: block;
-    font-size: 22px;
+  .custom-checkbox{
+    .fa{
+        font-size: 1.6em;
     padding-right: 15px;
     padding-bottom: 10px;
+    cursor: pointer;
+    }
+}
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .checked {
+display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checked
+{
+    display: block;
     background: -webkit-linear-gradient($primary-color, $secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -100,33 +107,37 @@ $anim-dur: 1.5s;
     animation-duration: 0.4s;
     animation-name: hearth__anim;
     animation-iteration-count: 1;
-    }
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+{
+display: none;
 }
 @keyframes hearth__anim {
-  0% {
-      background: -webkit-linear-gradient(white, white);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    0% {
+        background: -webkit-linear-gradient(white, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    25% {
+        background: -webkit-linear-gradient(white, $primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50% {
+        background: -webkit-linear-gradient(lighten($primary-color, 20%), $primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    75% {
+        background: -webkit-linear-gradient(#bb56dc, $primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
   }
-  25% {
-      background: -webkit-linear-gradient(white, $primary-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  50% {
-      background: -webkit-linear-gradient(lighten($primary-color, 20%), $primary-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  75% {
-      background: -webkit-linear-gradient(#bb56dc, $primary-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  100% {
-      background: -webkit-linear-gradient($primary-color, $secondary-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-}
 }

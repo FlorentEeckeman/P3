@@ -45,12 +45,12 @@
                         justify-content: space-evenly;
                         :nth-child(n){
                             margin: 0;
-                            font-size: 17px;
                             padding-left: 10px;
                         }
                     }
                     .restaurant__card__info__title{
                         flex: 3;
+                        font-size: 17px;
                     }
                     .restaurant__card__info__like{
                         cursor: pointer;
@@ -65,7 +65,7 @@
                         .fa-solid{
                             display: none;
                         }
-                        @include annim__heart;
+                        
                     }
                     .new-restaurant{
                         display: block;

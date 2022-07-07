@@ -91,14 +91,18 @@ main .menu__complet .menu__titre div .fa-regular {
 main .menu__complet .menu__titre div .fa-solid {
   display: none;
 }
-main .menu__complet .menu__titre div:hover .fa-regular {
-  display: none;
-}
-main .menu__complet .menu__titre div:hover .fa-solid {
-  display: block;
-  font-size: 22px;
+main .menu__complet .menu__titre div .custom-checkbox .fa {
+  font-size: 1.6em;
   padding-right: 15px;
   padding-bottom: 10px;
+  cursor: pointer;
+}
+main .menu__complet .menu__titre div .custom-checkbox input[type=checkbox],
+main .menu__complet .menu__titre div .custom-checkbox .checked {
+  display: none;
+}
+main .menu__complet .menu__titre div .custom-checkbox input[type=checkbox]:checked ~ .checked {
+  display: block;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
@@ -106,6 +110,9 @@ main .menu__complet .menu__titre div:hover .fa-solid {
   animation-duration: 0.4s;
   animation-name: hearth__anim;
   animation-iteration-count: 1;
+}
+main .menu__complet .menu__titre div .custom-checkbox input[type=checkbox]:checked ~ .unchecked {
+  display: none;
 }
 @keyframes hearth__anim {
   0% {
